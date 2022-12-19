@@ -1,0 +1,40 @@
+header{
+    height: 20vh;
+    /* background: #CD2D29; */
+}
+
+.container-selects{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    /* border: solid blue 1px; */
+    height: 100%;
+}
+
+select {
+    color: gray;
+    padding: .5rem 1rem;
+
+  }
+  
+  select:hover,
+  select:focus,
+  select:active,
+  select:checked {
+    color: red;
+  }
+  select::after{
+    content: '\25BC';
+    position: absolute;
+
+  }
+  
+  select option {
+    color: #333;
+  }
+  
+.btn{
+    padding: .5rem 1rem;
+    border: none;
+}

@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: #34495e;
+    font-family: 'Lato', 'Arial', sans-serif;
+    background: rgb(32, 33, 36);
+}
+ul{
+    list-style: none;
+}
+
+a{
+    color: #2c3e50;
+    text-decoration: none;
+}
+.container{
+    display: flex;
+    width: 100vw;
+    height: 60vh;
+    border: solid red 1px;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #E6B483; */
+   
+}
+.content{
+    display: flex;
+    position: relative;
+}
+
+.book{
+    position: relative;
+    width: 250px;
+    height: 370px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+   
+}
+
+.frontcover img {
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+}
+
+
+
+.front li {
+    background: white;
+    border-radius: 10px;
+    
+}
+.back li {
+    background: rgb(19, 59, 132);
+    border-radius: 10px;
+    width: 97.5% !important;
+    
+}
+.page-principal {
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page-principal img{
+    border: solid red 1px;
+    backface-visibility: hidden;
+    /* background-color: #34495e; */
+    transform:rotateY(180deg);
+}
+.page > li{
+    
+    background-color: white;
+
+    box-shadow: inset 0px -1px 2px rgb(50, 50, 50, 0.1),
+        inset 0px -1px 2px rgb(150, 150, 150, 0.2);
+    border-radius: 0px 5px 5px 0px;
+    width: 100%;
+    height: 100%;
+    
+    transform-origin: left center;
+}
+
+.front{
+    transform: rotateY(-31deg) translateZ(19px);
+    
+}
+.back{
+    transform: rotateY(-27deg) translateZ(-30px);
+    
+}
+/* folhas que se move as 3 primeiras */
+.folha01{
+    transform: rotateY(-28deg)translateZ(20px);
+}
+.folha02{
+    transform: rotateY(-29deg)translateZ(25px);
+}
+.folha03{
+    transform: rotateY(-30deg)translateZ(29px);
+}
+
+.folha04{
+    transform: rotateY(-29deg)translateZ(10px);
+}
+.folha04-back{
+    transform: rotateY(-29deg)translateZ(5px);
+}
+
+.folha05{
+    transform: rotateY(-28deg)translateZ(12px);
+}
+
+
+.front,
+.back,
+.front li,
+.back li{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    
+}
+
+.front,
+.back{
+    transform-origin: 0% 100%;
+}
+.front{
+    transition: all 0.8s ease , z-index 0.6s
+}
+
+.front li:last-child{
+    transform: rotateY(180deg) translateZ(2px);
+    
+}
+
+.page,
+.page > li {
+    position: absolute;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease , z-index 0.6s
+}
+.page{
+    width: 95%;
+    height: 95%;
+    top: 2.5%;
+    left: 8%;
+}
+
+.page li {
+
+    transition-duration: 0.6;
+}
+
+.open-front {
+    transform: rotateY(-140deg)translateZ(25px);
+    left: 7%;
+    transition: 1s;
+}
+.open-folha01{
+    transform: rotateY(-100deg)translateZ(20px) ;
+    left: 8%;
+    transform-origin: 0%;
+    transition: 1.2s;
+}
+.open-folha02{
+    transform: rotateY(-102deg)translateZ(15px) ;
+    left: 9%;
+    transform-origin: 0%;
+    transition: 1.5s;
+}
+
+.open-folha03{
+    transform: rotateY(-105deg)translateZ(10px) ;
+    left: 12%;
+    transform-origin: 0%;
+    transition: 1.9s;
+}
+
+.turn{
+    transform: rotateY(-105deg)translateZ(5px) ;
+    left: 12%;
+    transform-origin: 0%;
+    transition: 1.9s;
+}
+
+.open-folha04{
+    transform: rotateY(-3deg)translateZ(19px);
+    transform-origin: 0%;
+    transition: 2s;
+}
+
+.open-folha05{
+    transform: rotateY(-1deg)translateZ(19px);
+    transform-origin: 0%;
+    transition: 2.2s;
+}
+
+.red{
+    color: red;
+}
+/* .book:hover > .page li:nth-child(1){
+    transform: rotateY(-30deg);
+    transition: 1.5s;
+} */
+/* .book:hover > .page li:nth-child(2){
+    transform: rotateY(-35deg);
+    transition: 1.8s;
+} */
+/* .book:hover > .page li:nth-child(3){
+    transform: rotateY(-140deg);
+    transition: 1.6s;
+}
+.book:hover > .page li:nth-child(4){
+    transform: rotateY(-150deg);
+    transition: 1.4s;
+} */
+
+
+/* .book:hover > .page li:nth-child(5){
+    transform: rotateY(-170deg);
+    transition: 1.2s;
+} */
+
+.frontcover {
+    position: absolute;
+    background: rgb(19, 59, 132);
+    height: 100%;
+    width: 101%;
+    border-radius: 5px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}

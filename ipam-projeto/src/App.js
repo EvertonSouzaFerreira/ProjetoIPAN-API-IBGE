@@ -1,9 +1,23 @@
-
+import Header from './componentes/header/Header';
 import './App.css';
+import Book from './componentes/book/Book';
+import Footer from './componentes/footer/Footer';
+import { useState } from 'react';
 
 function App() {
+  const [open, setOpen] = useState(false)
+
+  const handleOpen = () => {
+    setOpen(!open)
+  }
+
   return (
-    <h1>Projeto IPAM</h1>
+    <>
+      <Header handleOpen={handleOpen}/>
+      <Book open={open}/>
+      <Footer/>
+    </>
+    
   );
 }
 
