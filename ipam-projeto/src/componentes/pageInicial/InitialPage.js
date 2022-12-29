@@ -8,10 +8,9 @@ function InitialPage() {
     
         <div className="container-front-page">     
             <h2>Estados e Municípios do Brasil</h2>              
-            <img src={mapaBrasil} alt=""/>  
+            <img src={mapaBrasil} alt="imagem-mapa-do-Brasil"/>  
             <h3>Preencha todos os campos e Submit</h3>      
         </div>
-
     </div>
   )
 }

@@ -1,9 +1,16 @@
 import React from 'react'
+import { RxLinkedinLogo, RxGithubLogo } from 'react-icons/rx';
 import '../footer/footer.css'
 
 function Footer() {
   return (
-    <footer>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, qui! Laboriosam totam quas mollitia omnis minus a, expedita obcaecati corporis asperiores itaque tempore dignissimos cupiditate repellendus nobis. Ad, explicabo fuga!</footer>
+    <footer>
+      <ul className='container-linkes-footer'>
+        <li><a href='https://www.linkedin.com/in/everton-de-souza-ferreira-1417921b2/'>{<RxLinkedinLogo size={25}/>} LinkedIn </a>  </li>
+        <li><a href='https://github.com/EvertonSouzaFerreira'>  {<RxGithubLogo size={25}/>} GitHub</a></li>
+        <li>&copy; 2022 Everton Ferreira</li>
+      </ul>
+    </footer>
   )
 }
 

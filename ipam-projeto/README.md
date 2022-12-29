@@ -1,4 +1,4 @@
- Criar um select para selecionar um estado. Utilizar a api: https://servicodados.ibge.gov.br/api/v1/localidades/etasdos;
+- Criar um select para selecionar um estado. Utilizar a api: https://servicodados.ibge.gov.br/api/v1/localidades/etasdos;
 
  
 

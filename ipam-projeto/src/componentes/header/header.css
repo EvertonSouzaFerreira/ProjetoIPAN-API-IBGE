@@ -5,7 +5,7 @@ header{
     color: white;
     padding-left: 1rem;
     height: 20vh;
-    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background: #00595D;
 }
 .btn{
@@ -44,4 +44,15 @@ select {
 .btn{
     padding: .5rem 1rem;
     border: none;
+}
+
+
+@media only screen and (max-width: 700px) {
+  .container-selects{
+    justify-content: center;
+    gap: 0;
+  }
+  select {
+    width: 40%;
+  }
 }
