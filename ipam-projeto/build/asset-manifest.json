@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3417eb31.css",
+    "main.js": "/static/js/main.f8f6007f.js",
+    "static/media/map do brasil-transparent02.png": "/static/media/map do brasil-transparent02.7222c227e0bf0894c64a.png",
+    "index.html": "/index.html",
+    "main.3417eb31.css.map": "/static/css/main.3417eb31.css.map",
+    "main.f8f6007f.js.map": "/static/js/main.f8f6007f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3417eb31.css",
+    "static/js/main.f8f6007f.js"
+  ]
+}
